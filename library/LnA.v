@@ -240,11 +240,11 @@ Tactic Notation "lin_solve" :=
   lazymatch goal with
       | [ |- ?P ] => first [
           is_singleton_eq P
-          | fail 1 "(goal is not a single linear equation)"
+          | fail "(goal is not a single linear equation)"
       ];
       lin_solve_clear_tactic;
-      lraold;
-      fail 1 "(cannot solve this system)"
+      try lraold; 
+      fail "(cannot solve this system)"
   end.
 
 (* --------- curry_assumptions ---------- *)

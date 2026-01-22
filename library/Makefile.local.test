@@ -23,7 +23,7 @@ NORMALIZER:=test-normalizer.sed
 test: $(TESTFILES:.v=.vo)
 .PHONY: test
 
-COQTOP=rocq top
+COQTOP=rocq top -w -deprecated-from-Coq -w -deprecated-missing-stdlib -w -deprecated-tactic -Q . LnA
 COQ_TEST=$(COQTOP) $(COQDEBUG) -batch -test-mode
 
 # ./.coqdeps.d: $(TESTFILES)
