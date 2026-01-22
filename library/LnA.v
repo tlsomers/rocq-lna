@@ -243,7 +243,7 @@ Tactic Notation "lin_solve" :=
           | fail 1 "(goal is not a single linear equation)"
       ];
       lin_solve_clear_tactic;
-      lra;
+      lraold;
       fail 1 "(cannot solve this system)"
   end.
 

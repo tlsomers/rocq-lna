@@ -1,4 +1,4 @@
 Require Import Fourier.
 
-Tactic Notation "lra" := 
+Tactic Notation "lraold" := 
     try fourier ; try ring_simplify ; reflexivity.

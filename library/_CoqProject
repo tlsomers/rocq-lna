@@ -3,6 +3,11 @@
 # From Iris: We sometimes want to locally override notation, and there is no good way to do that with scopes.
 -arg -w -arg -notation-overridden
 
+-arg -w -arg -deprecated-from-Coq
+-arg -w -arg -deprecated-missing-stdlib
+-arg -w -arg -deprecated-tactic
+
+
 Lra.v
 LnA.v
 KripkeLA.v
