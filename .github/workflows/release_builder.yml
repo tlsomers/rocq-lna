@@ -37,7 +37,7 @@ jobs:
       fail-fast: false
       matrix:
         coq-platform-pick:
-          - "8.19~2024.10"
+          - "9.0~2025.08"
 
     steps:
       - name: Set git to use LF
@@ -50,10 +50,10 @@ jobs:
         with:
           path: main
 
-      - name: Git checkout Coq platform
+      - name: Git checkout Rocq platform
         uses: actions/checkout@v4
         with:
-          repository: coq/platform
+          repository: rocq-prover/platform
           path: platform
 
       - name: Download EnVar Plugin
@@ -62,7 +62,7 @@ jobs:
           Expand-Archive -Path "EnVar.zip" -DestinationPath "platform\windows\envar"
           tree .
 
-      - name: Set switch name in coq platform
+      - name: Set switch name in rocq platform
         shell: cmd
         # We need to output without a (windows style new line here) else bash will complain AND we rely on the fact that the file has a trailing new line.
         run: |
