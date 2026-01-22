@@ -1,5 +1,9 @@
 -R . "SCcoq"
 
+-arg -w -arg -deprecated-from-Coq
+-arg -w -arg -deprecated-missing-stdlib
+-arg -w -arg -deprecated
+
 TotalMap.v
 Framework_common.v
 NS/FrameworkNS.v

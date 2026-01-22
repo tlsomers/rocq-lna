@@ -16,8 +16,8 @@ bug-reports: "https://github.com/logic-and-applications/rocq-lna/issues"
 dev-repo: "git+https://github.com/logic-and-applications/rocq-lna/"
 homepage: "https://github.com/logic-and-applications/rocq-lna"
 depends: [ 
-    "coq" { >= "8.19" } 
-    "vscoq-language-server" { = "2.2.3" }
+    "coq" { >= "9.0" } 
+    "vscoq-language-server" { = "2.3.4" }
 ]
 build: [
   [make]
