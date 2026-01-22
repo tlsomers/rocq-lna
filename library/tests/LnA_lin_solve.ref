@@ -17,9 +17,9 @@ Tactic failure: (goal is not a single linear equation).
      : string
 File "./tests/LnA_lin_solve.v", line 47, characters 13-22:
 The command has indeed failed with message:
-Tactic failure: (cannot solve this system).
+Tactic failure: (cannot solve this system) (level 1).
 "test_lin_solve_sad_no_prep"
      : string
 File "./tests/LnA_lin_solve.v", line 54, characters 13-22:
 The command has indeed failed with message:
-Tactic failure: (cannot solve this system).
+Tactic failure: (cannot solve this system) (level 1).
