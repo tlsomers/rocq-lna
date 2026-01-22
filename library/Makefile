@@ -16,5 +16,8 @@ Makefile.coq:
 clean: Makefile.coq
 	+@make -f Makefile.coq clean
 
+install: Makefile.coq
+	+@make -f Makefile.coq install
+
 all: Makefile.coq
 	+@make -f Makefile.coq all
