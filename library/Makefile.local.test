@@ -23,7 +23,7 @@ NORMALIZER:=test-normalizer.sed
 test: $(TESTFILES:.v=.vo)
 .PHONY: test
 
-COQTOP=coqtop
+COQTOP=rocq top
 COQ_TEST=$(COQTOP) $(COQDEBUG) -batch -test-mode
 
 # ./.coqdeps.d: $(TESTFILES)

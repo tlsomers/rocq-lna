@@ -1,5 +1,5 @@
 Require Export Reals.
-Require Export Lra.
+Require Export LnA.Lra.
 
 Require Import Classical.
 
@@ -124,7 +124,7 @@ Tactic Notation "exi_i" constr(X) :=
      [exists X
      |let T := type of X in
       fail 1 "(the type" T "of" X "does not match the type" A " of the quantifier)"
-     ]
+     |fail 1 "(the argument" X "is not a valid term)"]
   | |- _ => fail "(the goal is not an existential quantification)"
   end.
 
@@ -236,17 +236,15 @@ intros.
   where only singleton equations are accepted in the goal
   and only hypotheses with singleton equations are used to prove this
 *)
-Tactic Notation "lin_solve" := 
-  lazymatch goal with 
+Tactic Notation "lin_solve" :=
+  lazymatch goal with
       | [ |- ?P ] => first [
           is_singleton_eq P
           | fail 1 "(goal is not a single linear equation)"
-      ]; 
+      ];
       lin_solve_clear_tactic;
-      first [
-          lra
-          | fail 1 "(cannot solve this system)"
-      ]
+      lra;
+      fail 1 "(cannot solve this system)"
   end.
 
 (* --------- curry_assumptions ---------- *)
