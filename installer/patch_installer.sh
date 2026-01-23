@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Comment out copies of non existing compcert files in installer
-sed -i 's/cp source.coq-compcert/# cp source/' '/platform/windows/create_installer_windows.sh'
+# sed -i 's/cp source.coq-compcert/# cp source/' '/platform/windows/create_installer_windows.sh'
 
 # Comment out coqide related files
 sed -i '/^cp "source\/${ide_name}/ s/^/# /' '/platform/windows/create_installer_windows.sh'
